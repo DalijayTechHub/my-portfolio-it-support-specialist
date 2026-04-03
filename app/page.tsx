@@ -1,8 +1,7 @@
 import Navbar from "@/components/navbar"
 import Hero from "@/components/hero"
 import About from "@/components/about"
-import Journey from "@/components/journey"
-import EducationJourney from "@/components/education-journey"
+import Journeys from "@/components/journeys"
 import Skills from "@/components/skills"
 import Projects from "@/components/projects"
 import Testimonials from "@/components/testimonials"
@@ -23,8 +22,7 @@ export default function Home() {
           <Hero />
           <About />
           <ElevatorPitchYouTube />
-          <Journey />
-          <EducationJourney />
+          <Journeys />
           <Skills />
           <Projects />
           <Testimonials />
