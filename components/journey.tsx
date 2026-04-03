@@ -2,38 +2,44 @@
 import { useState } from "react"
 
 export default function Journey() {
-  const [active, setActive] = useState<number>(0)
+  const [active, setActive] = useState<number | null>(null)
 
   const timelineItems = [
     {
       year: "Present",
-      title: "Expanding Cloud Expertise",
+      title: "ALX Cloud Computing Program",
       description:
-        "Currently deepening my knowledge in multi-cloud environments and modern container orchestration with Kubernetes.",
+        "Currently enrolled in the ALX Cloud Computing program, to deepen my knowledge and understanding on AWS Core Services and gain hands-on experience with AWS services, CI/CD pipelines, and infrastructure automation.",
     },
     {
       year: "2024",
-      title: "Freelance DevOps Consultant",
+      title: "Freelance WordPress & AWS Website Deployment",
       description:
-        "Began offering freelance DevOps consulting services, helping small businesses implement better infrastructure and automation.",
+        "Designed and deployed websites like Dalijay Tech Hub using AWS EC2, Route 53. Combined frontend customization with secure cloud hosting.",
     },
     {
-      year: "2023",
-      title: "AWS Certification",
+      year: "October – December 2024",
+      title: "DevOps Internship – ExLearn Technologies",
       description:
-        "Obtained AWS Cloud Practitioner certification and expanded my skills in cloud infrastructure and automation.",
+        "Joined ExLearn Technologies as a remote DevOps intern, where I built CI/CD pipelines, managed AWS infrastructure, and gained hands-on experience with Terraform and Linux server optimization.",
     },
     {
-      year: "2022",
-      title: "DevOps Internship",
+      year: "April – September 2023",
+      title: "IT Instructor – Charlotte Dolphyne Technical Institute",
       description:
-        "Joined ExLearn Technologies as a remote DevOps intern, where I built my first CI/CD pipelines and managed AWS infrastructure.",
+        "Taught Web Design and C++ programming, configured classroom network environments, and provided IT support for smooth operations.",
+    },
+    {
+      year: "2022 – Present",
+      title: "System Administrator – Kolonos BV",
+      description:
+        "Configured and optimized network systems, managed data backup and recovery, and provided technical support while monitoring system performance to maintain uptime and efficiency.",
     },
     {
       year: "2021",
-      title: "Started as Junior IT Support",
+      title: "Google IT Support Certificate",
       description:
-        "Began my career providing technical support for a local school, managing daily IT operations and setting up computer labs.",
+        "Began my IT career by earning the Google IT Support Certificate, building a strong foundation in networking, operating systems, system administration, and IT security.",
     },
   ]
 
@@ -47,10 +53,8 @@ export default function Journey() {
           </div>
 
           <div className="relative mt-10">
-            {/* Timeline line */}
             <div className="absolute top-0 left-[15px] sm:left-1/2 w-0.5 h-full bg-primary/30 -translate-x-1/2 z-0 rounded-full" />
 
-            {/* Timeline items */}
             <div className="relative z-10">
               {timelineItems.map((item, index) => (
                 <div
@@ -75,9 +79,7 @@ export default function Journey() {
                         {item.title}
                       </h3>
                       <p className="text-primary font-medium">{item.year}</p>
-                      <p
-                        className={`mt-2 ${active === index ? "text-gray-600 dark:text-gray-300" : "text-muted-foreground"}`}
-                      >
+                      <p className={`mt-2 ${active === index ? "text-gray-600 dark:text-gray-300" : "text-muted-foreground"}`}>
                         {item.description}
                       </p>
                     </div>
