@@ -22,7 +22,7 @@ export default function Certifications() {
     {
       name: "AWS Certified Solution Architect",
       issuer: "Amazon Web Services",
-      date: "",
+      date: "November 2025",
       icon: <Award className="h-8 w-8" />,
     },
     {
